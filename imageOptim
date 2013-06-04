@@ -61,7 +61,7 @@ function now {
 
 # ($1:appName): Get the number of processes in use by an Application
 function countProcesses {
-  printf $(ps -aef | grep  "[${1:0:1}]${1:1}" | wc -l)
+  printf $(ps -x -o command | grep '[I]mage[Optim|Alpha]' | wc -l)
 }
 
 # (): Sleep until ImageOptim.app is done optimising images
